@@ -133,7 +133,7 @@ class G2p(object):
 
         if to_syl:
             inp = compose(inp)
-        # 룰 적용하고 싶지 않을 때 * 사용.
+        # 국어법칙 적용하고 싶지 않을 때 문자들 사이에 ^ 사용.
         inp = inp.replace('^', '')
         return inp
 
