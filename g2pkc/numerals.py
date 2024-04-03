@@ -6,7 +6,7 @@ https://github.com/kyubyong/g2pK
 import re
 
 # This is a list of bound nouns preceded by pure Korean numerals.
-BOUND_NOUNS = "군데 권 개 그루 닢 두 마리 모 모금 뭇 발 발짝 방 번 벌 보루 살 수 술 시 쌈 움큼 정 짝 채 척 첩 축 켤레 톨 통 가지 배 시간 살 명 줄"
+BOUND_NOUNS = "군데 권 개 그루 닢 두 마리 모 모금 뭇 발 발짝 방 번 벌 보루 살 수 술 시 쌈 움큼 정 짝 채 척 첩 축 켤레 톨 통 가지 배 시간 살 명 줄 곳"
 
 
 def process_num(num, sino=True):
