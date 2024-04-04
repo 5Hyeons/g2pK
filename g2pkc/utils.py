@@ -181,7 +181,7 @@ def annotate(string, mecab):
     tag_seq = []
     for token, tag in tokens:
         tag = tag.split("+")[-1]
-        if tag=="NNBC": # bound noun
+        if tag=="NNBC" or token=='곳': # bound noun
             tag = "B"
         else:
             tag = tag[0]
