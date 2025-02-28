@@ -62,7 +62,7 @@ class G2p(object):
 
         return out
 
-    def __call__(self, string, descriptive=False, verbose=False, group_vowels=False, to_syl=False, use_dict=True):
+    def __call__(self, string, descriptive=False, verbose=False, group_vowels=False, to_syl=False, use_dict=True, only_normalize=False):
         '''Main function
         string: input string
         descriptive: boolean.
@@ -101,6 +101,11 @@ class G2p(object):
 
         # 4. Spell out arabic numbers
         string = convert_num(string)
+
+        if only_normalize:
+            inp = re.sub("/[PJEB]", "", string)
+            inp = inp.replace('^', '')
+            return inp
 
         # 5. decompose
         inp = h2j(string)
