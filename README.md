@@ -112,7 +112,13 @@ This is possible due to [cmu pronouncing dictionary](http://www.speech.cs.cmu.ed
 -> 앞으로[아프로], 덮이다[더피다] 
 ```
 
+* If you set only_normalize=True, the text will be normalized but not phonemized.
+```
+>>> sent = 'ISO9001 및 ISO14001 인증을 받은 이 소재는 10⁶–10⁸Ω/sq의 표면 저항을 가지며, 10¹⁶Ω/sq 이상의 절연성을 제공한다. 또한, 열전도율은 5 W/mK이며, 두께는 50 μm, 면적은 1 m²이다. 10 kV의 전압에도 안정적인 성능을 유지하며, 소음 차단 성능은 30 dB 이상이다.'
+>>> pron = g2p(sent, only_normalize=True)
+아이에스오구천일및 아이에스오만사천일인증을 받은 이 소재는 십의 여섯제곱–십의 여덟제곱옴퍼 스퀘어의 표면 저항을 가지며, 십의 열 여섯제곱옴퍼 스퀘어 이상의 절연성을 제공한다. 또한, 열전도율은 오와트 퍼미터켈빈이며, 두께는 오십마이크로미터, 면적은 일제곱미터이다. 십킬로볼트의 전압에도 안정적인 성능을 유지하며, 소음 차단 성능은 삼십데시벨 이상이다.
 
+```
 ## References
 
 If you use our software for research, please cite:
